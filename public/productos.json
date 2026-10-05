@@ -1,0 +1,18 @@
+[
+  { "id": 1, "nombre": "PlayStation 5", "categoria": "consolas",
+    "precioNormal": 549990, "precioOferta": 499990,
+    "descripcion": "Consola de nueva generación con SSD ultrarrápido y gráficos 4K.",
+    "imagen": "img/ps5.png" },
+  { "id": 2, "nombre": "Xbox Series X", "categoria": "consolas",
+    "precioNormal": 529990, "precioOferta": 479990,
+    "descripcion": "La Xbox más potente: 12 teraflops, 4K real y Game Pass.",
+    "imagen": "img/xbox.png" },
+  { "id": 3, "nombre": "Control DualSense", "categoria": "accesorios",
+    "precioNormal": 59990, "precioOferta": 49990,
+    "descripcion": "Control inalámbrico con respuesta háptica y gatillos adaptativos.",
+    "imagen": "img/dualsense.png" },
+  { "id": 4, "nombre": "Headset Gamer", "categoria": "accesorios",
+    "precioNormal": 39990, "precioOferta": 32990,
+    "descripcion": "Audífonos con micrófono y sonido envolvente para largas partidas.",
+    "imagen": "img/headset.png" }
+]

@@ -1,0 +1,12 @@
+/* Ajustes visuales sobre Bootstrap 5 - Land of Games */
+body { background-color: #f4f6f9; }
+.navbar-brand { font-size: 1.4rem; letter-spacing: 0.5px; }
+
+/* Efecto sutil al pasar el mouse sobre las tarjetas */
+.card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
+
+.card-img-top { height: 180px; object-fit: contain; padding: 1rem; background-color: #fff; }
+
+/* Resalta el total del carrito */
+.total-carrito { border-top: 2px solid #0d6efd; }
