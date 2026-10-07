@@ -1,18 +1,74 @@
 [
-  { "id": 1, "nombre": "PlayStation 5", "categoria": "consolas",
-    "precioNormal": 549990, "precioOferta": 499990,
+  {
+    "id": 1,
+    "nombre": "PlayStation 5",
+    "categoria": "consolas",
+    "precioNormal": 549990,
+    "precioOferta": 499990,
     "descripcion": "Consola de nueva generación con SSD ultrarrápido y gráficos 4K.",
-    "imagen": "img/ps5.png" },
-  { "id": 2, "nombre": "Xbox Series X", "categoria": "consolas",
-    "precioNormal": 529990, "precioOferta": 479990,
+    "imagen": "img/ps5.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox Series X",
+    "categoria": "consolas",
+    "precioNormal": 529990,
+    "precioOferta": 479990,
     "descripcion": "La Xbox más potente: 12 teraflops, 4K real y Game Pass.",
-    "imagen": "img/xbox.png" },
-  { "id": 3, "nombre": "Control DualSense", "categoria": "accesorios",
-    "precioNormal": 59990, "precioOferta": 49990,
+    "imagen": "img/xbox.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Control DualSense",
+    "categoria": "accesorios",
+    "precioNormal": 59990,
+    "precioOferta": 49990,
     "descripcion": "Control inalámbrico con respuesta háptica y gatillos adaptativos.",
-    "imagen": "img/dualsense.png" },
-  { "id": 4, "nombre": "Headset Gamer", "categoria": "accesorios",
-    "precioNormal": 39990, "precioOferta": 32990,
+    "imagen": "img/dualsense.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Headset Gamer",
+    "categoria": "accesorios",
+    "precioNormal": 39990,
+    "precioOferta": 32990,
     "descripcion": "Audífonos con micrófono y sonido envolvente para largas partidas.",
-    "imagen": "img/headset.png" }
+    "imagen": "img/headset.png"
+  },
+  {
+    "id": 5,
+    "nombre": "God of War Ragnarök",
+    "categoria": "accion",
+    "precioNormal": 39990,
+    "precioOferta": 34990,
+    "descripcion": "Kratos y Atreus enfrentan el Fimbulwinter en una aventura de acción épica.",
+    "imagen": "img/god-of-war-ragnarok.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Forza Horizon 5",
+    "categoria": "carreras",
+    "precioNormal": 35990,
+    "precioOferta": 29990,
+    "descripcion": "Mundo abierto en México con cientos de autos y carreras sin límites.",
+    "imagen": "img/forza-horizon-5.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "EA Sports FC 25",
+    "categoria": "deportes",
+    "precioNormal": 44990,
+    "precioOferta": 39990,
+    "descripcion": "El simulador de fútbol con equipos, ligas y modos online actualizados.",
+    "imagen": "img/ea-sports-fc-25.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Hogwarts Legacy",
+    "categoria": "aventura",
+    "precioNormal": 42990,
+    "precioOferta": 36990,
+    "descripcion": "Explora el mundo mágico, aprende hechizos y vive tu propia historia.",
+    "imagen": "img/hogwarts-legacy.svg"
+  }
 ]

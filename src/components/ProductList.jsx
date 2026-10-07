@@ -1,7 +1,7 @@
 // ProductList.jsx - Decide qué mostrar: cargando, error, sin resultados o la lista
 import ProductCard from "./ProductCard.jsx";
 
-export default function ProductList({ productos, cargando, error, carrito, onAgregar }) {
+export default function ProductList({ productos, cargando, error, carrito, onAgregar, onEliminarProducto }) {
   // Renderizado condicional 1: mientras carga
   if (cargando) {
     return (
@@ -31,6 +31,7 @@ export default function ProductList({ productos, cargando, error, carrito, onAgr
             producto={producto}
             cantidadEnCarrito={enCarrito ? enCarrito.cantidad : 0}
             onAgregar={onAgregar}
+            onEliminarProducto={onEliminarProducto}
           />
         );
       })}
