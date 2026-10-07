@@ -1,9 +1,13 @@
 // App.jsx - Componente principal de Land of Games
-// Aquí vive TODO el estado (useState) y la carga de datos (useEffect).
+// Aquí vive el estado (useState) y la carga de datos (useEffect).
+// Los componentes hijos reciben datos y funciones mediante props.
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
+import CategoryFilter from "./components/CategoryFilter.jsx";
 import ProductList from "./components/ProductList.jsx";
+import AddGameForm from "./components/AddGameForm.jsx";
 import Cart from "./components/Cart.jsx";
+import ContactForm from "./components/ContactForm.jsx";
 
 export default function App() {
   // ---------- ESTADOS (useState) ----------
@@ -12,7 +16,7 @@ export default function App() {
   const [error, setError] = useState(null);            // mensaje de error (si falla la carga)
   const [carrito, setCarrito] = useState([]);          // [{...producto, cantidad}]
   const [busqueda, setBusqueda] = useState("");        // texto del buscador
-  const [categoria, setCategoria] = useState("todas"); // filtro del navbar
+  const [categoria, setCategoria] = useState("todas"); // filtro por categoría
 
   // ---------- EFECTO (useEffect) ----------
   // Se ejecuta una sola vez al montar el componente ([] al final).
@@ -32,6 +36,24 @@ export default function App() {
     // Limpieza: si el componente se desmonta, cancelamos el temporizador
     return () => clearTimeout(temporizador);
   }, []);
+
+  // ---------- FUNCIONES DEL CATÁLOGO (agregar / eliminar juegos) ----------
+  // Agrega un juego nuevo al estado. El id nuevo es el mayor existente + 1.
+  const agregarJuego = (juego) => {
+    setProductos((actual) => {
+      const nuevoId = actual.reduce((max, p) => Math.max(max, p.id), 0) + 1;
+      return [...actual, { ...juego, id: nuevoId }];
+    });
+  };
+
+  // Elimina un producto del catálogo (y también del carrito si estaba ahí).
+  const eliminarProducto = (id) => {
+    setProductos((actual) => actual.filter((p) => p.id !== id));
+    setCarrito((actual) => actual.filter((item) => item.id !== id));
+    // Si la categoría seleccionada se queda sin productos, volvemos a "todas"
+    const quedanEnCategoria = productos.some((p) => p.id !== id && p.categoria === categoria);
+    if (categoria !== "todas" && !quedanEnCategoria) setCategoria("todas");
+  };
 
   // ---------- FUNCIONES DEL CARRITO ----------
   // Agrega un producto; si ya estaba, aumenta su cantidad.
@@ -63,6 +85,9 @@ export default function App() {
   const totalProductos = carrito.reduce((suma, item) => suma + item.cantidad, 0);
   const totalPrecio = carrito.reduce((suma, item) => suma + item.precioOferta * item.cantidad, 0);
 
+  // Categorías disponibles, calculadas desde el catálogo actual (sin repetir)
+  const categorias = [...new Set(productos.map((p) => p.categoria))];
+
   // Filtra el catálogo por categoría y por texto de búsqueda
   const productosFiltrados = productos.filter(
     (p) =>
@@ -72,32 +97,53 @@ export default function App() {
 
   return (
     <>
-      <Navbar
-        categoria={categoria}
-        onCategoria={setCategoria}
-        busqueda={busqueda}
-        onBusqueda={setBusqueda}
-        cantidadCarrito={totalProductos}
-      />
+      <Navbar busqueda={busqueda} onBusqueda={setBusqueda} cantidadCarrito={totalProductos} />
+
+      <header className="bg-dark text-white text-center py-5">
+        <div className="container">
+          <h1 className="display-5 fw-bold">Land Of Games</h1>
+          <p className="lead mb-0">Consolas, accesorios y videojuegos al mejor precio.</p>
+        </div>
+      </header>
 
       <main className="container my-5">
-        <h1 className="text-center mb-4">Nuestros Productos</h1>
-        <ProductList
-          productos={productosFiltrados}
-          cargando={cargando}
-          error={error}
-          carrito={carrito}
-          onAgregar={agregarAlCarrito}
-        />
-      </main>
+        <section id="inicio" className="mb-5">
+          <h2 className="text-center mb-4">Nuestros productos</h2>
+          <CategoryFilter categorias={categorias} seleccionada={categoria} onSeleccionar={setCategoria} />
+          <ProductList
+            productos={productosFiltrados}
+            cargando={cargando}
+            error={error}
+            carrito={carrito}
+            onAgregar={agregarAlCarrito}
+            onEliminarProducto={eliminarProducto}
+          />
+        </section>
 
-      <Cart
-        items={carrito}
-        totalProductos={totalProductos}
-        totalPrecio={totalPrecio}
-        onCambiarCantidad={cambiarCantidad}
-        onEliminar={eliminarDelCarrito}
-      />
+        <section id="agregar" className="mb-5">
+          <h2 className="mb-3">Agregar un videojuego</h2>
+          <AddGameForm onAgregarJuego={agregarJuego} />
+        </section>
+
+        <section id="carrito" className="mb-5">
+          <Cart
+            items={carrito}
+            totalProductos={totalProductos}
+            totalPrecio={totalPrecio}
+            onCambiarCantidad={cambiarCantidad}
+            onEliminar={eliminarDelCarrito}
+          />
+        </section>
+
+        <section id="contacto" className="mb-2">
+          <h2 className="mb-3">Contacto</h2>
+          <div className="row">
+            <div className="col-lg-8">
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer className="bg-dark text-white text-center py-4">
         <p className="mb-1">Land of Games &copy; 2026</p>

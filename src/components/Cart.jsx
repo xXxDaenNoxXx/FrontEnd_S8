@@ -3,7 +3,7 @@ import { formatoCLP } from "../utils/formato.js";
 
 export default function Cart({ items, totalProductos, totalPrecio, onCambiarCantidad, onEliminar }) {
   return (
-    <section className="container mb-5">
+    <div>
       <h2>Carrito de compras</h2>
 
       {/* Renderizado condicional: mensaje si el carrito está vacío */}
@@ -35,6 +35,6 @@ export default function Cart({ items, totalProductos, totalPrecio, onCambiarCant
           </li>
         </ul>
       )}
-    </section>
+    </div>
   );
 }

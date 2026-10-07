@@ -10,3 +10,8 @@ body { background-color: #f4f6f9; }
 
 /* Resalta el total del carrito */
 .total-carrito { border-top: 2px solid #0d6efd; }
+
+/* Navegación suave y espacio para el navbar fijo al saltar a una sección */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 80px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
