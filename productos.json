@@ -1,18 +1,74 @@
 [
-  { "id": 1, "nombre": "PlayStation 5", "categoria": "consolas",
-    "precioNormal": 549990, "precioOferta": 499990,
+  {
+    "id": 1,
+    "nombre": "PlayStation 5",
+    "categoria": "consolas",
+    "precioNormal": 549990,
+    "precioOferta": 499990,
     "descripcion": "Consola de nueva generación con SSD ultrarrápido y gráficos 4K.",
-    "imagen": "img/ps5.png" },
-  { "id": 2, "nombre": "Xbox Series X", "categoria": "consolas",
-    "precioNormal": 529990, "precioOferta": 479990,
+    "imagen": "img/ps5.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox Series X",
+    "categoria": "consolas",
+    "precioNormal": 529990,
+    "precioOferta": 479990,
     "descripcion": "La Xbox más potente: 12 teraflops, 4K real y Game Pass.",
-    "imagen": "img/xbox.png" },
-  { "id": 3, "nombre": "Control DualSense", "categoria": "accesorios",
-    "precioNormal": 59990, "precioOferta": 49990,
+    "imagen": "img/xbox.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Control DualSense",
+    "categoria": "accesorios",
+    "precioNormal": 59990,
+    "precioOferta": 49990,
     "descripcion": "Control inalámbrico con respuesta háptica y gatillos adaptativos.",
-    "imagen": "img/dualsense.png" },
-  { "id": 4, "nombre": "Headset Gamer", "categoria": "accesorios",
-    "precioNormal": 39990, "precioOferta": 32990,
+    "imagen": "img/dualsense.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Headset Gamer",
+    "categoria": "accesorios",
+    "precioNormal": 39990,
+    "precioOferta": 32990,
     "descripcion": "Audífonos con micrófono y sonido envolvente para largas partidas.",
-    "imagen": "img/headset.png" }
+    "imagen": "img/headset.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Elden Ring",
+    "categoria": "accion",
+    "precioNormal": 39990,
+    "precioOferta": 34990,
+    "descripcion": "Un guerrero exiliado desafía a semidioses caídos en un reino devastado para reclamar el trono del Círculo de Elden..",
+    "imagen": "img/elden_ring.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Forza Horizon 5",
+    "categoria": "carreras",
+    "precioNormal": 35990,
+    "precioOferta": 29990,
+    "descripcion": "Mundo abierto en México con cientos de autos y carreras sin límites.",
+    "imagen": "img/forza-horizon-5.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "No Man´s Sky",
+    "categoria": "deportes",
+    "precioNormal": 44990,
+    "precioOferta": 39990,
+    "descripcion": "Un cosmonauta sin memoria viaja a través de planetas y galaxias infinitas para descifrar el misterio de su propia existencia y del universo.",
+    "imagen": "img/no_mans_sky.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Hogwarts Legacy",
+    "categoria": "aventura",
+    "precioNormal": 42990,
+    "precioOferta": 36990,
+    "descripcion": "Explora el mundo mágico, aprende hechizos y vive tu propia historia.",
+    "imagen": "img/hogwarts-legacy.jpg"
+  }
 ]
