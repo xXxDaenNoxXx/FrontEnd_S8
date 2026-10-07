@@ -37,12 +37,12 @@
   },
   {
     "id": 5,
-    "nombre": "God of War Ragnarök",
+    "nombre": "Elden Ring",
     "categoria": "accion",
     "precioNormal": 39990,
     "precioOferta": 34990,
-    "descripcion": "Kratos y Atreus enfrentan el Fimbulwinter en una aventura de acción épica.",
-    "imagen": "img/god-of-war-ragnarok.svg"
+    "descripcion": "Un guerrero exiliado desafía a semidioses caídos en un reino devastado para reclamar el trono del Círculo de Elden..",
+    "imagen": "img/elden_ring.jpg"
   },
   {
     "id": 6,
@@ -51,16 +51,16 @@
     "precioNormal": 35990,
     "precioOferta": 29990,
     "descripcion": "Mundo abierto en México con cientos de autos y carreras sin límites.",
-    "imagen": "img/forza-horizon-5.svg"
+    "imagen": "img/forza-horizon-5.jpg"
   },
   {
     "id": 7,
-    "nombre": "EA Sports FC 25",
+    "nombre": "No Man´s Sky",
     "categoria": "deportes",
     "precioNormal": 44990,
     "precioOferta": 39990,
-    "descripcion": "El simulador de fútbol con equipos, ligas y modos online actualizados.",
-    "imagen": "img/ea-sports-fc-25.svg"
+    "descripcion": "Un cosmonauta sin memoria viaja a través de planetas y galaxias infinitas para descifrar el misterio de su propia existencia y del universo.",
+    "imagen": "img/no_mans_sky.jpg"
   },
   {
     "id": 8,
@@ -69,6 +69,6 @@
     "precioNormal": 42990,
     "precioOferta": 36990,
     "descripcion": "Explora el mundo mágico, aprende hechizos y vive tu propia historia.",
-    "imagen": "img/hogwarts-legacy.svg"
+    "imagen": "img/hogwarts-legacy.jpg"
   }
 ]
